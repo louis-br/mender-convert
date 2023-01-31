@@ -23,7 +23,7 @@ GRUB_VERSION=2.04
 #
 # This will override the defaults set by by grub-mender-grubenv, if not an
 # empty string
-MENDER_GRUB_KERNEL_BOOT_ARGS=""
+MENDER_GRUB_KERNEL_BOOT_ARGS='root=live:${mender_kernel_root_base}${mender_boot_part} rd.live.overlay=${mender_kernel_root_base}${mender_boot_part} rd.live.overlay.overlayfs=1 console=ttyS0'
 
 # grub-mender-grubenv is the Mender integration for the GRUB bootloader
 MENDER_GRUBENV_VERSION="2ac898f5924d5870f8394ad8ecd3ef1ab1422e3b"
